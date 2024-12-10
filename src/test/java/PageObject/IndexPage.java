@@ -8,11 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 public class IndexPage {
 	WebDriver ldriver;
 	
-	IndexPage(WebDriver rdriver){
+	public IndexPage(WebDriver rdriver){
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
-	@FindBy()
+	@FindBy(xpath="//a[@class=\"login\"]")
 	WebElement signIn;
 	
 	public void clickOnSignIn()
